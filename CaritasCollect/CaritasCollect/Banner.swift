@@ -12,7 +12,7 @@ struct Banner: View {
         ZStack {
             Rectangle()
                 .frame(height: 200.0)
-                .foregroundColor(Color("302C"))
+                .foregroundColor(Color("1575C"))
             Text("Cáritas Collect")
                 .font(.largeTitle)
                 .fontWeight(.heavy)

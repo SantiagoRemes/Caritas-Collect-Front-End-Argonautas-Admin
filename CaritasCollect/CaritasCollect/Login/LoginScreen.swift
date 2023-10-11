@@ -64,7 +64,7 @@ struct LoginScreen: View {
                         .frame(height: 40.0)
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(Color("1575C"))
+                .tint(Color("302C"))
                 .padding(.top)
                 .offset(y: 10)
                 .background(NavigationLink("", isActive: $response.success){
