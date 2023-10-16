@@ -2,7 +2,7 @@
 //  ModelDetalle.swift
 //  CaritasCollect
 //
-//  Created by Santiago Remes Inguanzo on 28/09/2023.
+//  Created by Santiago Remes Inguanzo on 15/10/2023.
 //
 
 import Foundation

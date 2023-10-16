@@ -8,5 +8,5 @@
 import SwiftUI
 
 class GlobalData: ObservableObject {
-    var recolectorID: Int = 2
+    var administradorID: Int = 0
 }

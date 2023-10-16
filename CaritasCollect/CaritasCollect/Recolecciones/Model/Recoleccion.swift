@@ -2,7 +2,7 @@
 //  Recoleccion.swift
 //  CaritasCollect
 //
-//  Created by Alumno on 06/09/23.
+//  Created by Santiago Remes Inguanzo on 15/10/2023.
 //
 
 import Foundation
@@ -29,6 +29,6 @@ struct Detalles: Codable, Identifiable {
 }
 
 enum EstadoRecogido: String, Codable {
-    case pendiente = "Pendiente"
-    case recogido = "Recogido"
+    case pendiente = "NoCobrado"
+    case recogido = "Cobrado"
 }

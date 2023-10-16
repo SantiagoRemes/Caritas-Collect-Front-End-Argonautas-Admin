@@ -2,16 +2,17 @@
 //  ModelData.swift
 //  CaritasCollect
 //
-//  Created by Alumno on 13/10/23.
+//  Created by Santiago Remes Inguanzo on 15/10/2023.
 //
 
 import Foundation
 
-func callAPIRecolectores(idAdministrador: Int) -> RecolectoresGet {
+func callAPIRecolecciones(idRecolector: Int, estado: String) -> Recolecciones {
     
-    var lista : RecolectoresGet = RecolectoresGet(recolectores: [], success: false)
+    print(estado)
+    var lista : Recolecciones = Recolecciones(recolecciones: [], success: false)
     
-    guard let url = URL(string:"http://192.168.1.131:10206/recolectores?id=\(idAdministrador)") else{
+    guard let url = URL(string:"http://192.168.1.131:10206/recolecciones?id=\(idRecolector)&estado=\(estado)") else{
         return lista
     }
     
@@ -24,7 +25,7 @@ func callAPIRecolectores(idAdministrador: Int) -> RecolectoresGet {
         let jsonDecoder = JSONDecoder()
         if (data != nil){
             do{
-                let getRecolecciones = try jsonDecoder.decode(RecolectoresGet.self, from: data!)
+                let getRecolecciones = try jsonDecoder.decode(Recolecciones.self, from: data!)
                 lista = getRecolecciones
                 print("success \(lista.success)")
             }catch{
@@ -37,3 +38,4 @@ func callAPIRecolectores(idAdministrador: Int) -> RecolectoresGet {
     group.wait()
     return lista
 }
+

@@ -1,8 +1,8 @@
 //
-//  RecoleccionRow.swift
+//  RecoleccionesRow.swift
 //  CaritasCollect
 //
-//  Created by Alumno on 06/09/23.
+//  Created by Santiago Remes Inguanzo on 15/10/2023.
 //
 
 import SwiftUI

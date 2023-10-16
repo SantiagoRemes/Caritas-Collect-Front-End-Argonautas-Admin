@@ -2,24 +2,41 @@
 //  RecoleccionesView.swift
 //  CaritasCollect
 //
-//  Created by Alumno on 06/09/23.
+//  Created by Santiago Remes Inguanzo on 15/10/2023.
 //
 
 import SwiftUI
 
 struct RecoleccionesView: View {
-    @State var seleccionRecolecciones : String = "Pendiente"
+    
+    var idRecolector: Int = 1
+    
+    @State var seleccionRecolecciones : String = "NoCobrado"
 
-    let opcionesRecolecciones = ["Pendiente","Recogido"]
+    let opcionesRecolecciones = ["NoCobrado","Cobrado"]
     
     @State private var listaRecolecciones : [Detalles] = []
     
+    @Environment(\.dismiss) private var dismiss
     
+    private var backButton: some View {
+        Button(action: {
+            dismiss()
+        }) {
+            Image(systemName: "arrow.left.circle.fill").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit).frame(height: 35.0).offset(y:-10).ignoresSafeArea().tint(Color ("1575C")) // Usa una imagen del sistema
+        }
+    }
+    
+    init() {
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color("1575C"))
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color("1575C"))], for: .normal)
+        UISegmentedControl.appearance().backgroundColor = .white
+    }
     
     var body: some View {
         
         VStack {
-            Banner().frame(height: 100.0).ignoresSafeArea()
             NavigationStack{
                 
                 ZStack{
@@ -28,6 +45,7 @@ struct RecoleccionesView: View {
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("302C"))
+                        .navigationBarItems(leading: backButton)
                     
                     Picker("Opciones",selection: $seleccionRecolecciones){
                         ForEach(opcionesRecolecciones, id: \.self){
@@ -35,11 +53,14 @@ struct RecoleccionesView: View {
                                 .tag(opcion)
                         }
                     }
-                    .padding(.horizontal, 16)
-                    .background(Color(.systemGray6))
                     .cornerRadius(8)
-                    .offset(x:0,y:40)
-                    .pickerStyle(SegmentedPickerStyle())
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color("1575C"), lineWidth: 4))
+                    .frame(height: 1)
+                    .padding(.horizontal, 16)
+                    .offset(x:0,y:35)
+                    .pickerStyle(SegmentedPickerStyle()).foregroundColor(Color.orange)
+                    .scaledToFit()
+                    .scaleEffect(CGSize(width: 1.02, height: 1.3))
                     .onChange(of: seleccionRecolecciones) {
                         value in
                         listaRecolecciones = callAPIRecolecciones(idRecolector: idRecolector, estado: seleccionRecolecciones).recolecciones
@@ -47,6 +68,8 @@ struct RecoleccionesView: View {
                         
                     
                 }.offset(x:0,y:-9)
+                    .padding(.bottom, 30)
+                
                 VStack{
                     List(listaRecolecciones) { recoleccionItem in
                         NavigationLink(
@@ -59,6 +82,7 @@ struct RecoleccionesView: View {
                     
                 }
                 .frame(height: 350.0)
+                .offset(y: 10)
                 
                 Image("logo-caritas")
                     .resizable(resizingMode: .stretch)
@@ -75,6 +99,8 @@ struct RecoleccionesView: View {
         .refreshable {
             listaRecolecciones = callAPIRecolecciones(idRecolector: idRecolector, estado: seleccionRecolecciones).recolecciones
         }
+        .navigationBarBackButtonHidden()
+        
     }
 }
 

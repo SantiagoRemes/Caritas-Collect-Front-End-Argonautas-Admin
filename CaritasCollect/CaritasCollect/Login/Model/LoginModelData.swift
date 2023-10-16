@@ -2,15 +2,15 @@
 //  LoginModelData.swift
 //  CaritasCollect
 //
-//  Created by Alumno on 07/09/23.
+//  Created by Santiago Remes Inguanzo on 15/10/2023.
 //
 
 import Foundation
 
 func login(username: String, password: String) -> Get {
-    var res : Get = Get(_id_recolector: 0, mensaje: "", success: false)
+    var res : Get = Get(id: 0, mensaje: "", success: false)
     
-    guard let url = URL(string:"http://192.168.1.131:10206/login?usuario=\(username)&contrasena=\(password)") else {
+    guard let url = URL(string:"http://192.168.1.131:10206/login?usuario=\(username)&contrasena=\(password)&usertype=Admin") else {
         return res
     }
     
@@ -25,7 +25,7 @@ func login(username: String, password: String) -> Get {
             do{
                 let getItem = try jsonDecoder.decode(Get.self, from: data!)
                 print("Debug: \(getItem.mensaje)")
-                res._id_recolector = getItem._id_recolector
+                res.id = getItem.id
                 res.mensaje = getItem.mensaje
                 res.success = getItem.success
                 
@@ -39,7 +39,7 @@ func login(username: String, password: String) -> Get {
     
     group.wait()
     
-    idRecolector = res._id_recolector
+    idAdministrador = res.id
     
     return res
 }

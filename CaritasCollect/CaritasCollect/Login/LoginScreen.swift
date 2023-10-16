@@ -2,8 +2,10 @@
 //  LoginScreen.swift
 //  CaritasCollect
 //
-//  Created by Alumno on 06/09/23.
+//  Created by Alumno on 13/10/23.
 //
+
+import SwiftUI
 
 import SwiftUI
 
@@ -12,16 +14,12 @@ struct LoginScreen: View {
     @State private var username : String = ""
     @State private var password : String = ""
     @State private var mensaje : String = ""
-    @State var response : Get = Get(_id_recolector: 0, mensaje: "", success: false)
-    
-    @EnvironmentObject var globalData: GlobalData
+    @State var response : Get = Get(id: 0, mensaje: "", success: false)
     
     var body: some View {
         NavigationStack {
             VStack {
-                Banner()
-                    .frame(width: 400)
-                
+
                 
                 Text("Login")
                     .font(.largeTitle)
@@ -50,11 +48,8 @@ struct LoginScreen: View {
                 
                 Button {
                     response = login(username: username, password: password)
-                    globalData.recolectorID = response._id_recolector
                     if (!response.success) {
                         mensaje = response.mensaje
-                    } else {
-                        globalData.recolectorID = response._id_recolector
                     }
                 } label: {
                     Text("Entrar")

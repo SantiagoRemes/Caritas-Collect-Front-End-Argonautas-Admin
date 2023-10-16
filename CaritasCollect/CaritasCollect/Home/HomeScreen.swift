@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  HomeScreen.swift
 //  CaritasCollect
 //
-//  Created by Alumno on 05/09/23.
+//  Created by Alumno on 13/10/23.
 //
 
 import SwiftUI
@@ -14,16 +14,10 @@ struct HomeScreen: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            RecoleccionesView()
+            RecolectoresView()
                 .tag(0)
                 .tabItem {
                     Label("Home", systemImage: "house.circle")
-                }
-
-            ConfiguracionView()
-                .tag(1)
-                .tabItem {
-                    Label("Configuracion", systemImage: "gearshape.fill")
                 }
 
             Text("Log Out")
@@ -34,8 +28,8 @@ struct HomeScreen: View {
         }
         .tint(.white)
         .onAppear {
-            UITabBar.appearance().barTintColor = UIColor(Color("302C"))
-            UITabBar.appearance().backgroundColor = UIColor(Color("302C"))
+            UITabBar.appearance().barTintColor = UIColor(Color("1575C"))
+            UITabBar.appearance().backgroundColor = UIColor(Color("1575C"))
         }
         .onChange(of: selectedTab) { newTab in
             if newTab == 2 {
