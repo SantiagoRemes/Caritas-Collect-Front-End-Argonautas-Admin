@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73B845212ADC7BAF00C01B37 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8451E2ADC7BAE00C01B37 /* Get.swift */; };
+		7387929C2ADDD50A0079C396 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7387929B2ADDD50A0079C396 /* Get.swift */; };
 		73B845252ADC7C0C00C01B37 /* LoginModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B845242ADC7C0C00C01B37 /* LoginModelData.swift */; };
 		73B845272ADC7D1500C01B37 /* RecolectoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B845262ADC7D1400C01B37 /* RecolectoresView.swift */; };
 		73B845292ADC7E6100C01B37 /* RecolectoresRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B845282ADC7E6000C01B37 /* RecolectoresRow.swift */; };
@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		73B8451E2ADC7BAE00C01B37 /* Get.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Get.swift; path = "../../../../Caritas-Collect-Front/Caritas-Collect-Front-End-Argonautas/Untitled/CaritasCollect/CaritasCollect/Login/Model/Get.swift"; sourceTree = "<group>"; };
+		7387929B2ADDD50A0079C396 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		73B845242ADC7C0C00C01B37 /* LoginModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelData.swift; sourceTree = "<group>"; };
 		73B845262ADC7D1400C01B37 /* RecolectoresView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecolectoresView.swift; sourceTree = "<group>"; };
 		73B845282ADC7E6000C01B37 /* RecolectoresRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecolectoresRow.swift; sourceTree = "<group>"; };
@@ -184,9 +184,9 @@
 		FB1925642AD9EE60001D9B95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				73B8451E2ADC7BAE00C01B37 /* Get.swift */,
 				73B845242ADC7C0C00C01B37 /* LoginModelData.swift */,
 				FB1925712AD9F20B001D9B95 /* Post.swift */,
+				7387929B2ADDD50A0079C396 /* Get.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +270,7 @@
 				73B8453D2ADCB26300C01B37 /* Recoleccion.swift in Sources */,
 				73B845452ADCB42000C01B37 /* ModelDetalle.swift in Sources */,
 				FB1925722AD9F20B001D9B95 /* Post.swift in Sources */,
+				7387929C2ADDD50A0079C396 /* Get.swift in Sources */,
 				73B845372ADCB23200C01B37 /* RecoleccionRow.swift in Sources */,
 				73B845292ADC7E6100C01B37 /* RecolectoresRow.swift in Sources */,
 				FB1925522AD9EA4F001D9B95 /* CaritasCollectApp.swift in Sources */,
@@ -278,7 +279,6 @@
 				FB4D016D2AD9F2A4004F2BC9 /* HomeScreen.swift in Sources */,
 				73B845272ADC7D1500C01B37 /* RecolectoresView.swift in Sources */,
 				73B845412ADCB3A100C01B37 /* MapaView.swift in Sources */,
-				73B845212ADC7BAF00C01B37 /* Get.swift in Sources */,
 				73B845432ADCB3B300C01B37 /* RecoleccionDetalles.swift in Sources */,
 				FB1925662AD9F0BF001D9B95 /* Banner.swift in Sources */,
 				73B8452D2ADC92B200C01B37 /* AdministradorId.swift in Sources */,
