@@ -29,6 +29,7 @@
 		FB19256A2AD9F15B001D9B95 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1925692AD9F15B001D9B95 /* GlobalData.swift */; };
 		FB19256E2AD9F1C0001D9B95 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB19256D2AD9F1C0001D9B95 /* LoginScreen.swift */; };
 		FB1925722AD9F20B001D9B95 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1925712AD9F20B001D9B95 /* Post.swift */; };
+		FB34FF7A2ADE09640054AE23 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB34FF792ADE09640054AE23 /* PieChartView.swift */; };
 		FB4D016D2AD9F2A4004F2BC9 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D016C2AD9F2A4004F2BC9 /* HomeScreen.swift */; };
 		FB4D017B2AD9F4D1004F2BC9 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D017A2AD9F4D1004F2BC9 /* ModelData.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		FB1925692AD9F15B001D9B95 /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		FB19256D2AD9F1C0001D9B95 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		FB1925712AD9F20B001D9B95 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FB34FF792ADE09640054AE23 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		FB4D016C2AD9F2A4004F2BC9 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		FB4D017A2AD9F4D1004F2BC9 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 			children = (
 				73B845332ADCB1FD00C01B37 /* Model */,
 				73B845342ADCB22300C01B37 /* RecoleccionesView.swift */,
+				FB34FF792ADE09640054AE23 /* PieChartView.swift */,
 				73B845362ADCB23200C01B37 /* RecoleccionRow.swift */,
 			);
 			path = Recolecciones;
@@ -266,6 +269,7 @@
 				73B845252ADC7C0C00C01B37 /* LoginModelData.swift in Sources */,
 				FB19256A2AD9F15B001D9B95 /* GlobalData.swift in Sources */,
 				73B8452F2ADC935B00C01B37 /* Recolector.swift in Sources */,
+				FB34FF7A2ADE09640054AE23 /* PieChartView.swift in Sources */,
 				FB1925542AD9EA4F001D9B95 /* ContentView.swift in Sources */,
 				73B8453D2ADCB26300C01B37 /* Recoleccion.swift in Sources */,
 				73B845452ADCB42000C01B37 /* ModelDetalle.swift in Sources */,
