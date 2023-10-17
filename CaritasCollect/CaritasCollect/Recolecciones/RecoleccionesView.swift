@@ -129,7 +129,6 @@ struct RecoleccionesView: View {
             listaRecolecciones = callAPIRecolecciones(idRecolector: idRecolector, estado: seleccionRecolecciones).recolecciones
         }
         .navigationBarBackButtonHidden()
-        
     }
 }
 

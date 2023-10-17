@@ -13,11 +13,12 @@ struct Banner: View {
             Rectangle()
                 .frame(height: 200.0)
                 .foregroundColor(Color("1575C"))
+                .frame(maxWidth: .infinity)
             Text("Cáritas Collect")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.white)
-                .offset(y: 30)
+                .offset(y: 50)
         }
     }
 }
