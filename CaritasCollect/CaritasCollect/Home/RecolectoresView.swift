@@ -29,7 +29,7 @@ struct RecolectoresView: View {
                 VStack{
                     List(listaRecolectores) { RecolectorItem in
                         NavigationLink(
-                            destination: RecoleccionesView(),
+                            destination: RecoleccionesView(idRecolector: RecolectorItem.id),
                             label: {
                                 RecolectorRow(Recolector: RecolectorItem)
                             }
