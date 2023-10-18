@@ -9,17 +9,15 @@ import SwiftUI
 
 struct Banner: View {
     var body: some View {
-        ZStack {
-            Rectangle()
-                .frame(height: 200.0)
-                .foregroundColor(Color("1575C"))
-                .frame(maxWidth: .infinity)
+        VStack {
             Text("Cáritas Collect")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.white)
-                .offset(y: 50)
+                .offset(y: 30)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
+                .background(Color("1575C"))
     }
 }
 

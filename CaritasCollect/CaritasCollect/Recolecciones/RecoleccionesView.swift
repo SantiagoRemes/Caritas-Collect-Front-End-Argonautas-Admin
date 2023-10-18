@@ -26,16 +26,16 @@ struct RecoleccionesView: View {
         Button(action: {
             dismiss()
         }) {
-            Image(systemName: "arrow.left.circle.fill").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit).frame(height: 35.0).offset(y:-10).ignoresSafeArea().tint(Color ("1575C")) // Usa una imagen del sistema
+            Image(systemName: "arrow.left.circle.fill").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit).frame(height: 35.0).offset(y:-10).ignoresSafeArea().tint(Color ("302C")) // Usa una imagen del sistema
         }
     }
     
     init(idRecolector: Int) {
         self._idRecolector = State(initialValue: idRecolector)
         
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color("1575C"))
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color("302C"))
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color("1575C"))], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color("302C"))], for: .normal)
         UISegmentedControl.appearance().backgroundColor = .white
     }
     
@@ -43,9 +43,7 @@ struct RecoleccionesView: View {
         
         VStack {
             NavigationStack{
-                
                 VStack{
-                   
                     Text("Recolecciones")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
@@ -81,7 +79,7 @@ struct RecoleccionesView: View {
                         }
                     }
                     .cornerRadius(8)
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color("1575C"), lineWidth: 4))
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color("302C"), lineWidth: 4))
                     .frame(height: 1)
                     .padding(.horizontal, 16)
                     .offset(x:0,y:30)
@@ -94,7 +92,7 @@ struct RecoleccionesView: View {
                     }
                         
                     
-                }.offset(x:0,y: 10)
+                }.offset(x:0,y: 0)
                     .padding(.bottom, 30)
                 
                 VStack{

@@ -15,17 +15,16 @@ struct RecolectoresView: View {
     var body: some View {
         
         VStack {
+            Banner()
+                .frame(width: 500.0, height: 130.0)
+                .ignoresSafeArea()
+            Text("Recolectores")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundColor(Color("302C"))
+                .offset(y: -40)
+            
             NavigationStack{
-                
-                ZStack{
-                   
-                    Text("Recolectores")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color("302C"))
-
-                }.offset(x:0,y:-9)
-                
                 VStack{
                     List(listaRecolectores) { RecolectorItem in
                         NavigationLink(
@@ -38,6 +37,7 @@ struct RecolectoresView: View {
                     
                 }
                 .frame(height: 350.0)
+                .offset(y: -20)
                 
                 Image("logo-caritas")
                     .resizable(resizingMode: .stretch)

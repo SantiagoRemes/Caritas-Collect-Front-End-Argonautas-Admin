@@ -10,12 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Banner()
-
-                .ignoresSafeArea()
-            
             LoginScreen()
-                .padding(.top)
+                
         }
     }
 }

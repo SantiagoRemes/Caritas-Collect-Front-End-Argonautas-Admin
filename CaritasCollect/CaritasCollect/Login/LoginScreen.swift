@@ -19,7 +19,10 @@ struct LoginScreen: View {
     var body: some View {
         NavigationStack {
             VStack {
-
+                Banner()
+                    .frame(width: 500.0, height: 130.0)
+                    .ignoresSafeArea()
+                    
                 
                 Text("Login")
                     .font(.largeTitle)
