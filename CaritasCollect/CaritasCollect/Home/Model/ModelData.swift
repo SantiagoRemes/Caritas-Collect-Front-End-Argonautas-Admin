@@ -11,7 +11,7 @@ func callAPIRecolectores(idAdministrador: Int) -> RecolectoresGet {
     
     var lista : RecolectoresGet = RecolectoresGet(recolectores: [], success: false)
     
-    guard let url = URL(string:"http://10.14.255.69:10206/recolectores?id=\(idAdministrador)") else{
+    guard let url = URL(string:"http://192.168.1.131:10206/recolectores?id=\(idAdministrador)") else{
         return lista
     }
     

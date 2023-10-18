@@ -19,7 +19,7 @@ struct DetalleView: View {
         Button(action: {
             dismiss()
         }) {
-            Image(systemName: "arrow.left.circle.fill").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit).frame(height: 35.0).offset(y:-10).ignoresSafeArea().tint(Color ("302C")) // Usa una imagen del sistema
+            Image(systemName: "arrow.left.circle.fill").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit).frame(height: 35.0).offset(y:-5).ignoresSafeArea().tint(Color ("302C")).padding(.top, 10) // Usa una imagen del sistema
         }
     }
     

@@ -10,7 +10,7 @@ import Foundation
 func GetDetalles(id: Int) -> RecoleccionDetalles {
     var res : RecoleccionDetalles = RecoleccionDetalles(_id_donador: 0, _id_recibo: 0, _id_recolector: 0, comentarios: "", direccion: "", estado_recogido: "", lnombre_donador: "", pnombre_donador: "", tel_casa: 0, tel_celular: 0)
     
-    guard let url = URL(string:"http://10.14.255.69:10206/detalles?id=\(id)") else {
+    guard let url = URL(string:"http://192.168.1.131:10206/detalles?id=\(id)") else {
         return res
     }
     

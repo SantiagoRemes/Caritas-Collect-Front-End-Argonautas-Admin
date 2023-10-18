@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            Banner()
+                .frame(width: .infinity, height: 80)
+                .ignoresSafeArea()
+                .padding(.bottom, 20)
             LoginScreen()
                 
         }

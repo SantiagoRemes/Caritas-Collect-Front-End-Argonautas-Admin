@@ -14,10 +14,15 @@ struct Banner: View {
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.white)
-                .offset(y: 30)
+                .offset(y: 50)
+            HStack{
+                Spacer()
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
-                .background(Color("1575C"))
+        .padding(0)
+        .frame(height: 200)
+        .background(Color("1575C"))
+        .ignoresSafeArea()
     }
 }
 

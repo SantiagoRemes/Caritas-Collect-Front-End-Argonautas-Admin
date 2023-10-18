@@ -26,7 +26,7 @@ struct RecoleccionesView: View {
         Button(action: {
             dismiss()
         }) {
-            Image(systemName: "arrow.left.circle.fill").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit).frame(height: 35.0).offset(y:-10).ignoresSafeArea().tint(Color ("302C")) // Usa una imagen del sistema
+            Image(systemName: "arrow.left.circle.fill").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit).frame(height: 35.0).offset(y:-5).ignoresSafeArea().tint(Color ("302C")).padding(.top, 10) // Usa una imagen del sistema
         }
     }
     
@@ -89,11 +89,12 @@ struct RecoleccionesView: View {
                     .onChange(of: seleccionRecolecciones) {
                         value in
                         listaRecolecciones = callAPIRecolecciones(idRecolector: idRecolector, estado: seleccionRecolecciones).recolecciones
-                    }
+                    }.padding(.bottom, 30)
                         
                     
-                }.offset(x:0,y: 0)
+                }
                     .padding(.bottom, 30)
+                Spacer()
                 
                 VStack{
                     List(listaRecolecciones) { recoleccionItem in
@@ -106,14 +107,6 @@ struct RecoleccionesView: View {
                     }.listStyle(.inset)
                     
                 }
-                .frame(height: 350.0)
-                .offset(y: 50)
-                
-                Image("logo-caritas")
-                    .resizable(resizingMode: .stretch)
-                    .aspectRatio(contentMode: .fit)
-                    .offset(x:0,y:30)
-                    
                     
             }
             
