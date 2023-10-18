@@ -8,9 +8,9 @@
 import Foundation
 
 func GetDetalles(id: Int) -> RecoleccionDetalles {
-    var res : RecoleccionDetalles = RecoleccionDetalles(_id_donador: 0, _id_recibo: 0, _id_recolector: 0, comentarios: "", direccion: "", estado_recogido: "", lnombre_donador: "", pnombre_donador: "", tel_casa: 0, tel_celular: 0)
+    var res : RecoleccionDetalles = RecoleccionDetalles(_id_donador: 0, _id_recibo: 0, _id_recolector: 0, comentarios: "", lat: 0, lon: 0, direccion: "", estado_recogido: "", lnombre_donador: "", pnombre_donador: "", tel_casa: 0, tel_celular: 0)
     
-    guard let url = URL(string:"http://192.168.1.131:10206/detalles?id=\(id)") else {
+    guard let url = URL(string:"https://equipo05.tc2007b.tec.mx:10206/detalles?id=\(id)") else {
         return res
     }
     
@@ -37,6 +37,8 @@ func GetDetalles(id: Int) -> RecoleccionDetalles {
                     res.pnombre_donador = Item.pnombre_donador
                     res.tel_casa = Item.tel_casa
                     res.tel_celular = Item.tel_celular
+                    res.lat = Item.lat
+                    res.lon = Item.lon
                 }
                 
             }catch{
@@ -59,7 +61,7 @@ func PutEstado(id: Int, estado: String, comentarios: String){
     let jsonData = try? JSONSerialization.data(withJSONObject: body)
     
 
-    let url = URL(string: "http://192.168.1.131:10206/estado")!
+    let url = URL(string: "https://equipo05.tc2007b.tec.mx:10206/estado")!
     var request = URLRequest(url: url)
     request.httpMethod = "PUT"
     

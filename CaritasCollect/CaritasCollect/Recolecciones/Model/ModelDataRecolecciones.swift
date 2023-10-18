@@ -12,7 +12,7 @@ func callAPIRecolecciones(idRecolector: Int, estado: String) -> Recolecciones {
     print(estado)
     var lista : Recolecciones = Recolecciones(recolecciones: [], success: false)
     
-    guard let url = URL(string:"http://192.168.1.131:10206/recolecciones?id=\(idRecolector)&estado=\(estado)") else{
+    guard let url = URL(string:"https://equipo05.tc2007b.tec.mx:10206/recolecciones?id=\(idRecolector)&estado=\(estado)") else{
         return lista
     }
     
@@ -43,7 +43,7 @@ func callApiCuentaCobrado(idRecolector: Int) -> Int {
     
     var cantidadCobrado : Recolecciones = Recolecciones(recolecciones: [], success: false)
     
-    guard let url = URL(string:"http://192.168.1.131:10206/recolecciones?id=\(idRecolector)&estado=Cobrado") else{
+    guard let url = URL(string:"https://equipo05.tc2007b.tec.mx:10206/recolecciones?id=\(idRecolector)&estado=Cobrado") else{
         return cantidadCobrado.recolecciones.count
     }
     
@@ -75,7 +75,7 @@ func callApiCuentaNoCobrado(idRecolector: Int) -> Int {
     
     var cantidadCobrado : Recolecciones = Recolecciones(recolecciones: [], success: false)
     
-    guard let url = URL(string:"http://192.168.1.131:10206/recolecciones?id=\(idRecolector)&estado=NoCobrado") else{
+    guard let url = URL(string:"https://equipo05.tc2007b.tec.mx:10206/recolecciones?id=\(idRecolector)&estado=NoCobrado") else{
         return cantidadCobrado.recolecciones.count
     }
     

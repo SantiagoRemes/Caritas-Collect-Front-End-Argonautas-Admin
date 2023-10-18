@@ -1,8 +1,8 @@
 //
 //  MapaView.swift
-//  CaritasCollect
+//  EjemploMapas
 //
-//  Created by Santiago Remes Inguanzo on 15/10/2023.
+//  Created by Alumno on 04/10/23.
 //
 
 import SwiftUI
@@ -15,9 +15,7 @@ struct MapaView: View {
     @State private var region: MKCoordinateRegion = MKCoordinateRegion()
     @State private var locationManager = CLLocationManager()
     
-    @State var cities: [Marcador] = [
-    Marcador(coordinate: .init(latitude: 25.6503877, longitude: -100.2924652))
-    ]
+    @State var cities: [Marcador] = []
     
     var body: some View {
         
@@ -30,9 +28,12 @@ struct MapaView: View {
                 MapMarker(coordinate: city.coordinate, tint: .green) })
                 .onAppear(){
                     locationManager.requestWhenInUseAuthorization()
-                    region = MKCoordinateRegion(center:CLLocationCoordinate2D(latitude: latitud, longitude: longitud),latitudinalMeters: 3000,longitudinalMeters: 3000)
+                    region = MKCoordinateRegion(center:CLLocationCoordinate2D(latitude: latitud, longitude: longitud),latitudinalMeters: 500,longitudinalMeters: 500)
                 }
         }.ignoresSafeArea()
+            .onAppear(){
+                cities.append(Marcador(coordinate: CLLocationCoordinate2D(latitude: latitud, longitude: longitud)))
+            }
     }
 }
 
