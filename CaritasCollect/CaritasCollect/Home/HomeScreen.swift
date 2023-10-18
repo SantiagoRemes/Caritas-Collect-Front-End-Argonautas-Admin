@@ -24,7 +24,9 @@ struct HomeScreen: View {
                 .tag(2)
                 .tabItem {
                     Label("Log Out", systemImage: "door.left.hand.open")
+                        
                 }
+                .foregroundColor(.black)
         }
         .tint(.white)
         .onAppear {
